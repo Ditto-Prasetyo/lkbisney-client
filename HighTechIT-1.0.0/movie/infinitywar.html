@@ -29,6 +29,10 @@
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
     <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/style1.css" rel="stylesheet">
+
+
+
 </head>
 
 <body>
@@ -70,7 +74,7 @@
     <div class="container-fluid bg-primary">
         <div class="container">
             <nav class="navbar navbar-dark navbar-expand-lg py-0">
-                <a href="../index.html" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <h1 class="text-white fw-bold d-block">LAYARKACA<span class="text-secondary">21 2.0</span> </h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
@@ -79,17 +83,17 @@
                 </button>
                 <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                     <div class="navbar-nav ms-auto mx-xl-auto p-0">
-                        <a href="../index.html" class="nav-item nav-link">Home</a>
-                        <a href="view_movie.html" class="nav-item nav-link">Movies</a>
-                        <a href="view_terbaru.html" class="nav-item nav-link active text-secondary">New</a>
-                        <a href="view_series.html" class="nav-item nav-link">Series</a>
+                        <a href="../index.html" class="nav-item nav-link active text-secondary">Home</a>
+                        <a href="../view/view_movie.html" class="nav-item nav-link">Movies</a>
+                        <a href="../view/view_terbaru.html" class="nav-item nav-link">New</a>
+                        <a href="../view/view_series.html" class="nav-item nav-link">Series</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Genre</a>
                             <div class="dropdown-menu rounded">
-                                <a href="view_drama.html" class="dropdown-item">Drama</a>
-                                <a href="view_scifi.html" class="dropdown-item">Sci-fi</a>
-                                <a href="view_action.html" class="dropdown-item">Action</a>
-                                <a href="view_anime.html" class="dropdown-item">Anime</a>
+                                <a href="../view_drama.html" class="dropdown-item">Drama</a>
+                                <a href="../view_scifi.html" class="dropdown-item">Sci-fi</a>
+                                <a href="../view_action" class="dropdown-item">Action</a>
+                                <a href="../view_anime" class="dropdown-item">Anime</a>
                             </div>
                         </div>
                     </div>
@@ -212,184 +216,109 @@
     <!-- Carousel End -->
 
     <!-- Content Start -->
-    <div class="featured-movies">
-        <!-- Wrapper for Header and Grid -->
-        <div class="container">
-            <!-- Card for Header and Buttons -->
-            <div class="header-card">
-                <h2>Film Terbaru Hari Ini</h2>
-                <div class="social-buttons">
-                    <button class="btn-whatsapp">Whatsapp</button>
-                    <button class="btn-telegram">Telegram</button>
-                    <button class="btn-facebook">Facebook</button>
-                    <button class="btn-twitter">Twitter</button>
+    <div class="container my-4">
+        <!-- Video Player Section -->
+        <div class="video-player">
+            <!-- Header Bar -->
+            <div class="header-bar bg-success text-white text-right py-2 px-3">
+                <strong>
+                    <center><span>Avengers: Infinity War (2018)</span></center>
+                </strong>
+            </div>
+
+            <!-- Video Container -->
+            <div class="video-container position-relative d-flex justify-content-center align-items-center bg-black">
+                <img src="../img/thanos.jpg" alt="Avengers Infinity War Poster" class="video-thumbnail">
+                <button class="play-button position-absolute" onclick="playVideo()">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+
+            <!-- Control Bar -->
+            <div class="control-bar bg-success text-white py-2 d-flex justify-content-center">
+                <div class="control-item text-center mx-3" id="fullscreen-button">
+                    <i class="fas fa-eye"></i>
+                    <p class="mb-0">Fullscreen</p>
+                </div>
+                <div class="control-item text-center mx-3" id="trailer-button">
+                    <i class="fas fa-film"></i>
+                    <p class="mb-0">Trailer</p>
+                </div>
+                <div class="control-item text-center mx-3" id="cinema-button">
+                    <i class="fas fa-desktop"></i>
+                    <p class="mb-0">Cinema</p>
+                </div>
+                <div class="control-item text-center mx-3" id="popup-button">
+                    <i class="fas fa-external-link-alt"></i>
+                    <p class="mb-0">Popup</p>
                 </div>
             </div>
 
-            <div class="movie-grid">
-                <!-- Movie Card 1-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/alien.jpeg" alt="AR">
-                        <div class="rating">★ 7.2</div>
-                        <div class="episodes24">NEW</div>
-                    </div>
-                    <h6>Alien: Romulus (2024)</h6>
-                    <p>Horror, Sci-fi, Thriller, Australia, Canada, Hungary, New Zealand, United Kingdom, United States, BluRay, 2024</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">WATCH</button>
-                    </div>
-                </div>
-
-                <!-- Movie Card 2-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/smile.jpeg" alt="smile">
-                        <div class="rating">★ 7.1</div>
-                        <div class="episodes16">NEW</div>
-                    </div>
-                    <h6>Smile 2 (2024)</h6>
-                    <p>Horror, Mystery, Thriller, Canada, United States, WEBDL, 2024</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">WATCH</button>
-                    </div>
-                </div>
-
-                <!-- Movie Card 3-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/Lucy.jpeg" alt="Terrifier">
-                        <div class="rating">★ 7.0</div>
-                        <div class="episodes16">NEW</div>
-                    </div>
-                    <h6>Lucifer (2016)</h6>
-                    <p>Horror, United States, WEBDL, 2024</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">NONTON SERIES</button>
-                    </div>
-                </div>
-
-                <!-- Movie Card 4-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/john.jpg" alt="John Wick">
-                        <div class="rating">★ 8.2</div>
-                        <div class="episodes1">EPS 1</div>
-                    </div>
-                    <h6>John Wick (2023) Chapter 4</h6>
-                    <p>Action, Crime, Thriller, 2023</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series" onclick="window.location.href='../movie/johnwick.html'">NONTON SERIES</button>
-                    </div>
-                </div>
-
-                <!-- Movie Card 5-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/prison.jpeg" alt="Prison Break">
-                        <div class="rating">★ 7.5</div>
-                        <div class="episodes16">EPS 9</div>
-                    </div>
-                    <h6>Prison Break (2005) Season 5</h6>
-                    <p>Complete, West, Action, Crime, Drama, United Kingdom, United States, 2005</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">NONTON SERIES</button>
+            <!-- Modal untuk Video -->
+            <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h5 class="modal-title" id="trailerModalLabel">Marvel Studios' Avengers: Infinity War Official Trailer</h5></center>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ratio ratio-16x9">
+                                <iframe id="trailerVideo" src="" title="YouTube video" allow="autoplay; encrypted-media"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Content End -->
 
-    <!-- Content Start -->
-    <div class="featured-movies">
-        <!-- Wrapper for Header and Grid -->
-        <div class="container">
-            <div class="movie-grid">
-                <!-- Movie Card 1-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/dixon.jpeg" alt="The Walking Dead DD">
-                        <div class="rating">★ 8.5</div>
-                        <div class="episodes24">EPS 6</div>
-                    </div>
-                    <h6>The Walking Dead: Daryl Dixon (2023) Season 2</h6>
-                    <p>Ongoing, West, Horror, United States, 2023</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">NONTON SERIES</button>
-                    </div>
-                </div>
-
-                <!-- Movie Card 2-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/TUA.jpeg" alt="TUA">
-                        <div class="rating">★ 8.0</div>
-                        <div class="episodes16">EPS 6</div>
-                    </div>
-                    <h6>The Umbrella Academy (2019) Season 4</h6>
-                    <p>Complete, Action, Adventure, Comedy, 2019</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">NONTON SERIES</button>
-                    </div>
-                </div>
-
-                <!-- Movie Card 3-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/suparmin.jpg" alt="Superman">
-                        <div class="rating">★ 7.8</div>
-                        <div class="episodes16">EPS 9</div>
-                    </div>
-                    <h6>Superman and Lois (2021) Season 4</h6>
-                    <p>Complete, West, Action, Adventure, Drama, United States, 2021</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">NONTON SERIES</button>
-                    </div>
-                </div>
-
-                <!-- Movie Card 4-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/lor.jpg" alt="LOR">
-                        <div class="rating">★ 8.0</div>
-                        <div class="episodes1">EPS 8</div>
-                    </div>
-                    <h6>The Lord of the Rings: The Rings of Power (2022) Season 2</h6>
-                    <p>Complete, West, Action, Adventure, Drama, United States, 2022</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">NONTON SERIES</button>
-                    </div>
-                </div>
-
-                <!-- Movie Card 5-->
-                <div class="movie-card">
-                    <div class="movie-image">
-                        <img src="../img/got.jpg" alt="GOT">
-                        <div class="rating">★ 9.2</div>
-                        <div class="episodes16">EPS 6</div>
-                    </div>
-                    <h6>Game of Thrones (201) Season 8</h6>
-                    <p>Complete, West, Action, Adventure, Drama, United Kingdom, United States, 2011</p>
-                    <div class="buttons">
-                        <button class="btn-trailer">TRAILER</button>
-                        <button class="btn-series">NONTON SERIES</button>
+        <!-- Movie Information Section -->
+        <div class="container mt-5">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Poster Film -->
+                        <div class="col-md-4 text-center">
+                            <img src="../img/thanos.jpg" alt="Avengers Infinity War Poster" class="img-fluid rounded">
+                        </div>
+                        <!-- Informasi Film -->
+                        <div class="col-md-8">
+                            <h5 class="card-title mb-4">
+                                AVENGERS: INFINITY WAR (2018) FILM SUBTITLE INDONESIA STREAMING / DOWNLOAD
+                            </h5>
+                            <p><strong>Kualitas:</strong> BluRay</p>
+                            <p><strong>Negara:</strong> Norway, United States</p>
+                            <p><strong>Bintang film:</strong> Chris Evans, Chris Hemsworth, Mark Ruffalo, Robert Downey
+                                Jr., Scarlett Johansson</p>
+                            <p><strong>Sutradara:</strong> Anthony Russo, Joe Russo</p>
+                            <p><strong>Genre:</strong> Action, Adventure, Sci-fi</p>
+                            <p><strong>IMDb:</strong> 8.4 / 10 from 1,235,144 users</p>
+                            <p><strong>Diterbitkan:</strong> April 25, 2018</p>
+                            <p><strong>Oleh:</strong> LK21: Bisney Movie</p>
+                            <hr>
+                            <strong>
+                                <h6>Synopsis</h6>
+                            </strong>
+                            <p><strong>Avengers: Infinity War (2018)</strong> Para Avengers dan sekutunya harus rela
+                                mengorbankan segalanya untuk mengalahkan Thanos yang kuat sebelum serangannya yang
+                                menghancurkan alam semesta.</p>
+                            <p><strong>Budget:</strong> $321,000,000 (estimated)</p>
+                            <p><strong>Worldwide Gross:</strong> $2,052,415,039</p>
+                            <p><strong>Soundtrack:</strong> The Rubberband Man (Written by Thom Bell and Linda Creed)
+                            </p>
+                            <p><strong>Diunggah:</strong> June 1, 2021 7:36 am</p>
+                            <p><strong>Durasi:</strong> 2 jam 29 menit</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Content End -->
 
+
+    </div>
     <!-- Footer Start -->
     <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
         <div class="container pt-5 pb-4">
@@ -413,21 +342,32 @@
                 <div class="col-lg-3 col-md-6">
                     <a href="#" class="h3 text-secondary">Short Link</a>
                     <div class="mt-4 d-flex flex-column short-link">
-                        <a href="view_movie.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Movie us</a>
-                        <a href="view_terbaru.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>New us</a>
-                        <a href="view_series.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Series</a>
+                        <a href="../view/view_movie.html" class="mb-2 text-white">
+                            <i class="fas fa-angle-right text-secondary me-2"></i>Movie us
+                        </a>
+                        <a href="../view/view_terbaru.html" class="mb-2 text-white">
+                            <i class="fas fa-angle-right text-secondary me-2"></i>New us
+                        </a>
+                        <a href="../view/view_series.html" class="mb-2 text-white">
+                            <i class="fas fa-angle-right text-secondary me-2"></i>Series
+                        </a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-angle-right text-secondary me-2"></i>Genre</a>
+                            <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">
+                                <i class="fas fa-angle-right text-secondary me-2"></i>Genre
+                            </a>
                             <div class="dropdown-menu rounded">
-                                <a href="view_drama.html" class="dropdown-item">Drama</a>
-                                <a href="view_scifi.html" class="dropdown-item">Sci-fi</a>
-                                <a href="view_action.html" class="dropdown-item">Action</a>
-                                <a href="view_anime.html" class="dropdown-item">Anime</a>
+                                <a href="../view/view_drama.html" class="dropdown-item">Drama</a>
+                                <a href="../view/view_scifi.html" class="dropdown-item">Sci-fi</a>
+                                <a href="../view/view_action.html" class="dropdown-item">Action</a>
+                                <a href="../view/view_anime.html" class="dropdown-item">Anime</a>
                             </div>
                         </div>
-                        <a href="../team.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Team</a>
+                        <a href="team.html" class="mb-2 text-white">
+                            <i class="fas fa-angle-right text-secondary me-2"></i>Our Team
+                        </a>
                     </div>
-                </div>                
+                </div>
+
                 <div class="col-lg-3 col-md-6">
                     <a href="#" class="h3 text-secondary">Help Link</a>
                     <div class="mt-4 d-flex flex-column help-link">
@@ -457,7 +397,7 @@
             <hr class="text-light mt-5 mb-4">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <span class="text-light"><a href="../index.html" class="text-secondary"><i
+                    <span class="text-light"><a href="#" class="text-secondary"><i
                                 class="fas fa-copyright text-secondary me-2"></i>LK21 2.0 : Bisney Movie</a>, All right
                         reserved.</span>
                 </div>
@@ -471,7 +411,7 @@
     </div>
     <!-- Footer End -->
     <!-- Back to Top -->
-    <a href="view_terbaru.html" class="btn btn-secondary btn-square rounded-circle back-to-top"><i
+    <a href="../index.html" class="btn btn-secondary btn-square rounded-circle back-to-top"><i
             class="fa fa-arrow-up text-white"></i></a>
 
 
@@ -483,10 +423,12 @@
     <script src="../lib/waypoints/waypoints.min.js"></script>
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
+
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
 
     <script src="../js/func.js"></script>
+    <script src="../js/funcInfinitywar.js"></script>
 </body>
 
 </html>
