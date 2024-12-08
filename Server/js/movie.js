@@ -6,7 +6,7 @@ $(document).ready(function () {
             showMethod: 'slideDown',
             timeOut: 4000
         };
-        toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+        toastr.success('Responsive Admin Dashboard', 'Welcome to LK21: Bisney Movie!');
 
     }, 1300);
 

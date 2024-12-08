@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>INSPINIA | Dashboard</title>
+    <title>LK21+ | Dashboard</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -228,6 +228,78 @@
             margin-bottom: 0;
             /* Hilangkan margin bawah default tabel */
         }
+
+        /* Default tampilan untuk link logout */
+        .logout-link {
+            text-decoration: none;
+            color: #333;
+            /* Warna teks default */
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            /* Menambahkan transisi halus untuk teks */
+        }
+
+        /* Efek untuk ikon */
+        .logout-link i {
+            margin-right: 10px;
+            /* Memberikan jarak antara ikon dan teks */
+            transition: transform 0.3s ease, color 0.3s ease;
+            /* Efek transformasi dan perubahan warna ikon */
+        }
+
+        /* Efek hover pada ikon */
+        .logout-link:hover i {
+            transform: rotate(360deg) scale(1.2);
+            /* Membesarkan ikon */
+            color: #e74c3c;
+            /* Mengubah warna ikon saat hover */
+        }
+
+        /* Efek hover pada teks */
+        .logout-link:hover {
+            color: #e74c3c;
+            /* Mengubah warna teks saat hover */
+        }
+
+        /* Efek animasi pada teks saat hover */
+        .logout-link span {
+            display: inline-block;
+            transition: transform 0.3s ease, letter-spacing 0.2s ease, ;
+
+            /* Menambahkan transisi untuk pergeseran teks dan jarak antar huruf */
+        }
+
+        /* Efek animasi teks */
+        .logout-link:hover span {
+            transform: translateX(5px);
+            /* Geser teks ke kanan sedikit */
+            letter-spacing: 1px;
+            color: #e74c3c;
+            /* Memberikan jarak antara huruf untuk efek menarik */
+        }
+
+        /* Efek bayangan pada teks dan ikon saat hover */
+        .logout-link:hover {
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Bayangan halus pada teks */
+        }
+
+        /* Default gaya untuk welcome-message */
+        .welcome-message {
+            color: #6c757d;
+            /* Warna teks default (abu-abu) */
+            transition: all 0.3s ease;
+            /* Menambahkan transisi halus */
+        }
+
+        /* Efek saat hover pada teks */
+        .welcome-message:hover {
+            color: #28a745;
+            /* Mengubah warna teks menjadi hijau saat hover */
+            transform: scale(1.1);
+            /* Membesarkan teks sedikit */
+        }
     </style>
 
 </head>
@@ -239,7 +311,7 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                                <img alt="image" class="img-circle" src="img/SepuhAnnas1.jpg" />
                             </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Annas
@@ -248,6 +320,7 @@
                                 </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
                                 <li><a href="profile.html">Profile</a></li>
+                                <li><a href="projects.html">Project</a></li>
                                 <li><a href="login.html">Logout</a></li>
                             </ul>
                         </div>
@@ -261,13 +334,17 @@
                     <li>
                         <a href="Movie.html"><i class="fa fa-film"></i> <span class="nav-label">Movie</span></a>
                     </li>
-                    <li>
-                        <a href="Genre.html"><i class="fa fa-list-alt"></i> <span class="nav-label">Genre</span></a>
+                    <li class="active"> <!-- Tambahkan kelas active pada <li> -->
+                        <a href="genre.html">
+                            <i class="fa fa-list-alt"></i>
+                            <span class="nav-label">Genre</span>
+                        </a>
                     </li>
                 </ul>
 
             </div>
         </nav>
+        
 
         <div id="page-wrapper" class="gray-bg dashbard-1">
             <div class="row border-bottom">
@@ -284,36 +361,62 @@
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <strong><span class="m-r-sm text-muted welcome-message">Welcome to LK21: Bisney Movie Admin
-                                    Dashboard.</span></strong>
+                            <a href="index.html">
+                                <strong><span class="m-r-sm text-muted welcome-message">Welcome to LK21: Bisney Movie
+                                        Admin Dashboard.</span></strong>
+                            </a>
                         </li>
                         <li>
-                            <a href="login.html">
-                                <i class="fa fa-sign-out"></i> Log out
+                            <a href="login.html" class="logout-link">
+                                <i class="fa fa-sign-out"></i> <span>Log out</span>
                             </a>
                         </li>
                     </ul>
 
                 </nav>
             </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2 class="text-left">Genre</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="genre.html">Genre</a>
+                        </li>
+                        <li class="active">
+                            <strong>Genre</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
             <div class="row  border-bottom white-bg dashboard-header">
                 <div class="col-md-12 table-section">
                     <center><strong>
-                            <h2>Daftar Genre</h2>
+                            <a href="genre.html">
+                                <h2>Daftar Genre</h2>
+                            </a>
                         </strong></center>
                     <div class="table-responsive">
+                        <div class="download-options text-center" style="margin-top: 15px;">
+                            <button class="btn btn-success" id="download-doc">Download DOC</button>
+                            <button class="btn btn-info" id="download-xlsx">Download XLSX</button>
+                            <button class="btn btn-danger" id="download-pdf">Download PDF</button>
+                        </div>
+
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th class="col-no">No</th>
+                                    <th class="col-no text-center">No</th>
                                     <th class="col-nama text-center">Nama</th>
                                     <th class="col-aksi text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr data-id="1">
-                                    <td class="col-no">1</td>
-                                    <td class="col-nama movie-genre text-center">Action</td>
+                                    <td class="col-no clickable-row1">1</td>
+                                    <td class="col-nama movie-genre text-center clickable-row1">Action</td>
                                     <td class="col-aksi text-center">
                                         <button class="btn btn-primary btn-sm" data-toggle="modal"
                                             data-target="#modalEditData">
@@ -326,8 +429,36 @@
                                     </td>
                                 </tr>
                                 <tr data-id="2">
-                                    <td class="col-no">2</td>
-                                    <td class="col-nama movie-genre text-center">Drama</td>
+                                    <td class="col-no text-center clickable-row1">2</td>
+                                    <td class="col-nama movie-genre text-center clickable-row1">Drama</td>
+                                    <td class="col-aksi text-center">
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal"
+                                            data-target="#modalEditData">
+                                            <i class="fa fa-edit"></i> Edit
+                                        </button>
+                                        <button class="btn btn-danger btn-sm" data-toggle="modal"
+                                            data-target="#modalHapusData">
+                                            <i class="fa fa-trash"></i> Hapus
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr data-id="3">
+                                    <td class="col-no text-center clickable-row1">3</td>
+                                    <td class="col-nama movie-genre text-center clickable-row1">Sci-fi</td>
+                                    <td class="col-aksi text-center">
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal"
+                                            data-target="#modalEditData">
+                                            <i class="fa fa-edit"></i> Edit
+                                        </button>
+                                        <button class="btn btn-danger btn-sm" data-toggle="modal"
+                                            data-target="#modalHapusData">
+                                            <i class="fa fa-trash"></i> Hapus
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr data-id="4">
+                                    <td class="col-no text-center clickable-row1">4</td>
+                                    <td class="col-nama movie-genre text-center clickable-row1">Anime</td>
                                     <td class="col-aksi text-center">
                                         <button class="btn btn-primary btn-sm" data-toggle="modal"
                                             data-target="#modalEditData">
@@ -425,7 +556,7 @@
                         </div>
                     </div>
 
-                    <div class="text-right">
+                    <div class="text-center" style="margin-top: 15px;">
                         <button class="btn btn-success" data-toggle="modal" data-target="#modalTambahData">
                             <i class="fa fa-plus"></i> Tambah Data
                         </button>
@@ -440,7 +571,8 @@
                             FREE MOVIE FOR <strong>EVERYONE</strong> DESIRES.
                         </div>
                         <div>
-                            <strong>Copyright</strong> LK21: Bisney Movie &copy; 1918-2024
+                            <strong>Copyright</strong> <a href="../Client/index.html" style="color:#333">LK21: Bisney
+                                Movie</a> &copy; 1918-2024
                         </div>
                     </div>
                 </div>
@@ -488,7 +620,42 @@
     <!-- Toastr -->
     <script src="js/plugins/toastr/toastr.min.js"></script>
 
+    <!-- jsPDF untuk PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- xlsx untuk Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+    <!-- FileSaver.js untuk DOC -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
     <script src="js/movie.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        // Fungsi untuk mengunduh tabel sebagai PDF
+        document.getElementById('download-pdf').addEventListener('click', function () {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.autoTable({ html: '.table' });
+            doc.save('table.pdf');
+        });
+
+        // Fungsi untuk mengunduh tabel sebagai XLSX
+        document.getElementById('download-xlsx').addEventListener('click', function () {
+            var wb = XLSX.utils.table_to_book(document.querySelector('.table'), { sheet: "Sheet1" });
+            XLSX.writeFile(wb, 'table.xlsx');
+        });
+
+        // Fungsi untuk mengunduh tabel sebagai DOC
+        document.getElementById('download-doc').addEventListener('click', function () {
+            var htmlContent = document.querySelector('.table').outerHTML;
+            var blob = new Blob(['\ufeff', htmlContent], { type: 'application/msword' });
+            saveAs(blob, 'table.doc');
+        });
+    </script>
+
 </body>
 
 </html>
